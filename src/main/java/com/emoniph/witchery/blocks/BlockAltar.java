@@ -183,7 +183,7 @@ public class BlockAltar extends BlockBaseContainer {
             }
          }
 
-         newCore = valid && visited.size() == 6?(Coord)visited.get(0):null;
+         newCore = valid && visited.size() == 9?(Coord)visited.get(0):null;
          Iterator var17 = visited.iterator();
 
          while(var17.hasNext()) {
@@ -773,3 +773,4 @@ public class BlockAltar extends BlockBaseContainer {
       }
    }
 }
+
