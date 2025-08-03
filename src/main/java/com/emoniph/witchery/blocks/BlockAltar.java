@@ -175,7 +175,7 @@ public class BlockAltar extends BlockBaseContainer {
             }
 
             if(!newCore.equals(exclude)) {
-               if(te < 2 || te > 3) {
+               if(te < 2 || te > 4) {
                   valid = false;
                }
 
@@ -183,7 +183,7 @@ public class BlockAltar extends BlockBaseContainer {
             }
          }
 
-         newCore = valid && visited.size() == 9?(Coord)visited.get(0):null;
+         newCore = valid && (visited.size() == 9 || visited.size() == 6)?(Coord)visited.get(0):null;
          Iterator var17 = visited.iterator();
 
          while(var17.hasNext()) {
@@ -322,7 +322,7 @@ public class BlockAltar extends BlockBaseContainer {
             this.rangeScale = 1;
          }
 
-         if(nbtTag.hasKey("EnhancementLevel")) {
+         if(nbtTag.hasKey("EnhancementLevel")) { 
             this.enhancementLevel = nbtTag.getInteger("EnhancementLevel");
          } else {
             this.enhancementLevel = 0;
